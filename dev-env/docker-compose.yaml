@@ -1,0 +1,14 @@
+name: dev-env-assembly
+
+services:
+  asm32:
+    platform: linux/386
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /src
+    volumes:
+      - ..:/src
+    stdin_open: true
+    tty: true
+    container_name: dev-env-asm32-1
